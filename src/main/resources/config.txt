@@ -1,0 +1,5 @@
+jdbcUrl = jdbc:mysql://localhost/dbname?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = root
+password = ***
+devMode = true
+redisHost = localhost

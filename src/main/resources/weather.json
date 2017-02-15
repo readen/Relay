@@ -1,0 +1,52 @@
+{
+  //API名称,和文件一致
+  "apiName": "weather",
+  //API远程服务器地址
+  "host": "http://jisutqybmf.market.alicloudapi.com",
+  //API远程路径
+  "basePath": "/weather",
+  //API本地路径
+  "localPath": "/weather",
+  //appKey，替换为自己的appKey
+  "appKey": "23633340",
+  //appSecret，替换为自己的appSecret，没有则为空
+  "appSecret": "834197350f9953e0feea37679e14****",
+  //
+  "apiMethods": [
+    {
+      //API方法名
+      "name": "city",
+      //http请求方式
+      "httpMethod": "GET",
+      //缓存失效时间，单位分钟，为0表示不使用缓存
+      "cacheExpireTime": 30,
+      //url参数名称数组，如有默认值在后面加上"=默认值"，如"id=32"
+      "urlParams": [],
+      //header参数名称数组，如有默认值在后面加上"=默认值",如"contentType=application/json"
+      "headerParams": []
+    },
+    {
+      "name": "query",
+      "httpMethod": "GET",
+      "cacheExpireTime": 30,
+      "urlParams": [
+        {
+          "name": "city",
+          "require": false,
+          "defaultValue": null
+        },
+        {
+          "name": "citycode",
+          "require": false,
+          "defaultValue": null
+        },
+        {
+          "name": "cityid",
+          "require": false,
+          "defaultValue": null
+        }
+      ],
+      "headerParams": []
+    }
+  ]
+}
