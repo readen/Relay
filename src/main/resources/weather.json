@@ -20,9 +20,9 @@
       "httpMethod": "GET",
       //缓存失效时间，单位分钟，为0表示不使用缓存
       "cacheExpireTime": 30,
-      //url参数名称数组，如有默认值在后面加上"=默认值"，如"id=32"
+      //url参数数组，格式为{name,require,defaultValue}
       "urlParams": [],
-      //header参数名称数组，如有默认值在后面加上"=默认值",如"contentType=application/json"
+      //header参数数组，格式为{name,require,defaultValue}
       "headerParams": []
     },
     {
@@ -31,9 +31,9 @@
       "cacheExpireTime": 30,
       "urlParams": [
         {
-          "name": "city",
-          "require": false,
-          "defaultValue": null
+          "name": "city",//参数名
+          "require": false,//是否为必要参数
+          "defaultValue": null//默认值
         },
         {
           "name": "citycode",
