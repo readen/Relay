@@ -3,6 +3,10 @@
    Relay is a web api server that parse your request and fetch result from online HTTP APIs .Relay can atuo generate source for you,all you need to do is define the api definition 
 configuration files.
 
+##What it for
+ It use to make online API service into as your local service for speed up and simplified 
+call, also save your money by cutting down online API service call counts.
+
 ##Requirement
   This project use redis for cache.
   
