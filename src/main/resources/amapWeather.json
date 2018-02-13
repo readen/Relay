@@ -1,0 +1,40 @@
+{
+  //API名称,和文件一致
+  "apiName": "amapWeather",
+  //API远程服务器地址
+  "host": "http://restapi.amap.com",
+  //API远程路径
+  "basePath": "/v3/weather",
+  //API本地路径
+  "localPath": "/amap/weather",
+  //appKey，替换为自己的appKey
+  "appKey": "2c691ccae8aa03ca1f70f45f7fc354b0",
+  //appSecret，替换为自己的appSecret，没有则为空
+  "appSecret": "834197350f9953e0feea37679e148cf8",
+  //
+  "apiMethods": [
+    {
+      "name": "weatherInfo",
+      "httpMethod": "GET",
+      "cacheExpireTime": 30,
+      "urlParams": [
+        {
+          "name": "city",//参数名
+          "require": true,//是否为必要参数
+          "defaultValue": null //默认值
+        },
+        {
+          "name": "extensions",// 气象类型,base:返回实况天气 all:返回预报天气
+          "require": false,
+          "defaultValue": null
+        },
+        {
+          "name": "output",
+          "require": false,
+          "defaultValue": "JSON"
+        }
+      ],
+      "headerParams": []
+    }
+  ]
+}

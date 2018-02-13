@@ -39,12 +39,7 @@ public class AppConfig extends JFinalConfig{
     public void configPlugin(Plugins me) {
         loadPropertyFile("config.txt");
         RedisPlugin redisPlugin=new RedisPlugin("default",PropKit.get("redisHost"));
-        redisPlugin.setKeyNamingPolicy(new IKeyNamingPolicy() {
-            @Override
-            public String getKeyName(Object key) {
-                return null;
-            }
-        });
+        redisPlugin.setKeyNamingPolicy(IKeyNamingPolicy.defaultKeyNamingPolicy);
         me.add(redisPlugin);
     }
 
