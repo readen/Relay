@@ -110,16 +110,21 @@ public class HttpResponse extends HttpRequest {
 		HttpURLConnection httpConn = request.getHttpConnection();
 
 		try {
+			httpConn.setConnectTimeout(20 * 1000);
+			httpConn.setReadTimeout(20 * 1000);
 			httpConn.connect();
+			System.out.println("httpConn.connect()");
 			if (null != request.getContent()) {
 				out = httpConn.getOutputStream();
 				out.write(request.getContent());
 			}
 			content = httpConn.getInputStream();
+			System.out.println("httpConn.getInputStream");
 			response = new HttpResponse(httpConn.getURL().toString());
 			pasrseHttpConn(response, httpConn, content);
 			return response;
 		} catch (IOException e) {
+			System.out.println("httpConn.getErrorStream");
 			content = httpConn.getErrorStream();
 			response = new HttpResponse(httpConn.getURL().toString());
 			pasrseHttpConn(response, httpConn, content);

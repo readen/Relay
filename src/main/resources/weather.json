@@ -10,7 +10,7 @@
   //appKey，替换为自己的appKey
   "appKey": "23633340",
   //appSecret，替换为自己的appSecret，没有则为空
-  "appSecret": "834197350f9953e0feea37679e14****",
+  "appSecret": "834197350f9953e0feea37679e148cf8",
   //
   "apiMethods": [
     {
@@ -33,7 +33,7 @@
         {
           "name": "city",//参数名
           "require": false,//是否为必要参数
-          "defaultValue": null//默认值
+          "defaultValue": null //默认值
         },
         {
           "name": "citycode",

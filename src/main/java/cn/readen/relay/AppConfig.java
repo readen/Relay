@@ -5,6 +5,7 @@ import cn.readen.relay.api.ApiRouter;
 import com.jfinal.config.*;
 import com.jfinal.json.JacksonFactory;
 import com.jfinal.kit.PropKit;
+import com.jfinal.plugin.redis.IKeyNamingPolicy;
 import com.jfinal.plugin.redis.RedisPlugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
@@ -38,6 +39,12 @@ public class AppConfig extends JFinalConfig{
     public void configPlugin(Plugins me) {
         loadPropertyFile("config.txt");
         RedisPlugin redisPlugin=new RedisPlugin("default",PropKit.get("redisHost"));
+        redisPlugin.setKeyNamingPolicy(new IKeyNamingPolicy() {
+            @Override
+            public String getKeyName(Object key) {
+                return null;
+            }
+        });
         me.add(redisPlugin);
     }
 

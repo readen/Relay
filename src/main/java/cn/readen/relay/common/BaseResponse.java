@@ -1,11 +1,13 @@
 package cn.readen.relay.common;
 
+import java.io.Serializable;
+
 /**
  * @author malongbo
  * @date 2015/1/17
  * @package com.pet.project.bean
  */
-public class BaseResponse {
+public class BaseResponse implements Serializable{
     
     private Integer code = Code.SUCCESS;
     

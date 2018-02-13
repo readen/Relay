@@ -1,9 +1,13 @@
 package cn.readen.relay.api;
 
+import cn.readen.relay.ApiLogInterceptor;
 import cn.readen.relay.BaseController;
 import cn.readen.relay.ApiGenerator;
 import cn.readen.relay.model.ApiConfig;
 import cn.readen.relay.model.ApiMethod;
+import com.jfinal.aop.Before;
+
+@Before(ApiLogInterceptor.class)
 public class WeatherController extends BaseController {
 
 
